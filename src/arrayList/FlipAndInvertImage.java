@@ -6,6 +6,7 @@ public class FlipAndInvertImage {
 
         //Test [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]
         //  [[1,1,0],[1,0,1],[0,0,0]]
+        Object[] a = new Long[1];
         int A[][] = {{1, 1,0,0}, {1, 0,0, 1}, {1, 0, 1,0}};
         int B[][] = flipAndInvertImage(A);
 
