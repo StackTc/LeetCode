@@ -48,7 +48,7 @@ public class GetImportance {
             return map.get(id).importance;
         }
 
-        int result = 0;
+        int result = map.get(id).importance;
         for (int i : map.get(id).subordinates) {
             result += getImportanceHelper(map, i);
         }
