@@ -47,7 +47,7 @@ public class FindMinDifference {
 
         int last = Math.min(Math.abs(minutes[minutes.length - 1] - minutes[0]),Math.abs(1440 + minutes[0] - minutes[minutes.length - 1]));
         return Math.min(last,min);
-
+        //
     }
 
 }
