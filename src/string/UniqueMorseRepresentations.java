@@ -26,7 +26,7 @@ public class UniqueMorseRepresentations {
 
     }
 
-    ////
+    //////
     public int uniqueMorseRepresentations(String[] words) {
         String[] morseCode = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..",
                 "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." };
