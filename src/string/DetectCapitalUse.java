@@ -19,6 +19,7 @@ package string;
  */
 public class DetectCapitalUse {
 
+    //
     public static void main(String[] args) {
 
     }
