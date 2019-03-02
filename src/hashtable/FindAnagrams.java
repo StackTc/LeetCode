@@ -28,28 +28,26 @@ public class FindAnagrams {
 
     public static List<Integer> findAnagrams(String s, String p) {
         List<Integer> result = new ArrayList<>();
-        Map<String,Integer> pmap = new HashMap<>();
-        for (int i = 0; i < p.length();i++) {
-            pmap.put(p.substring(i,i + 1),pmap.getOrDefault(p.substring(i,i + 1),0) + 1);
-        }
-
-        for (int i = 0; i <= s.length() - p.length(); i++) {
-            boolean flag = true;
-            Map<String,Integer> map = new HashMap<>(pmap);
-            for (int j = i; j < i + p.length(); j++) {
-                //说明p中不存在s
-                if (map.getOrDefault(s.substring(j, j + 1), - 1) <= 0) {
-                    flag = false;
-                    break;
-                }
-                map.put(s.substring(j, j + 1), map.getOrDefault(s.substring(j, j + 1), - 1) - 1);
-            }
-            if (flag) {
+        for (int i = 0; i < s.length() - p.length(); i++) {
+            String temp = s.substring(i, i + p.length());
+            if (isAnagrans(temp,p)) {
                 result.add(i);
             }
-
         }
         return result;
+    }
+
+    public static boolean isAnagrans(String s1 ,String s2) {
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+
+        char[] c1 = s1.toCharArray();
+        char[] c2 = s2.toCharArray();
+        Arrays.sort(c1);
+        Arrays.sort(c2);
+        return new String(c1).equals(new String(c2));
+
     }
 
 
